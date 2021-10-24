@@ -9,37 +9,38 @@ public class Mylinkedlist {
     public Mylinkedlist()
     {
 	    this.head = null;
-		this.tail=null;
-	}
+	    this.tail=null;
+    }
 	
     public void add(Node newNode)
      {
-		 if(head==null) {
+		 if(head==null) 
+		 {
 			head=newNode;
 		 }
 	    
-		 if(tail==null) {
-			 tail=newNode;
-	     }
-	    
-		 else {
+		 if(tail==null)
+		 {
+                      tail=newNode;
+	         }
+	        else 
+		{
 	    	Node temp = head;
 	    	head=newNode;
 	    	head.next=temp;
-	    	
-	     } 
+	       } 
      }
      
      public void append(Node newNode) 
      {
     	 if(head==null && tail==null) 
     	 {
-			   head=newNode;
-			   tail=newNode;
+		  head=newNode;
+		  tail=newNode;
 			   
-		 }
+	 }
 	    
-	     else {
+	 else {
 	    	
 	    	 Node temp=newNode;
 	    	 tail.next=newNode;
@@ -53,7 +54,8 @@ public class Mylinkedlist {
     	 System.out.println("Enter LinkList element After that you want to Insert your new element");
     	 int key=sc.nextInt();
     	 int res= search(key);
-    	 if(res==1) {
+    	 if(res==1)
+	 {
     		 Node temp=head;
     		 Node p=temp.next;
     		 System.out.println(" Enter your element to insert");
@@ -62,7 +64,8 @@ public class Mylinkedlist {
     		 
     		 while(temp.next!=null) 
     		 {
-    			 if(temp.data==key) {
+    			 if(temp.data==key) 
+			 {
     				 temp.next=node;
     				 node.next=p;
     				 break;
@@ -74,35 +77,38 @@ public class Mylinkedlist {
     	 }
     	 else {
     		 System.out.println(" element is not present");
-    	 }
-   	 }
+    	      }
+     }
      
      public void deletefirst(Node first) 
      {
- 		Node temp=head;
- 		head=temp.next;
+ 	 Node temp=head;
+ 	 head=temp.next;
  		
-   	 }
+     }
      
-     public void deleteLast() {
+     public void deleteLast()
+     {
  		Node temp=head;
  		tail=temp.next;
  		
- 		
- 	}
+     }
      
-     public int search( int key) {
+     public int search( int key)
+     {
     	 Node temp=head;
     	 int flag=0;
     	 while(true) {
     	 while(temp.next!=null) {
-    		 if(temp.data==key) {
+    		 if(temp.data==key)
+		 {
     			 System.out.println("value "+key+" is present");
     			 flag=1;
     		 }
     	    temp=temp.next;
          }
-    	 if(temp.data==key) {
+    	 if(temp.data==key)
+	 {
     		 System.out.println("value "+key+" is present"); 
     		 flag=1;
     	 }
@@ -149,9 +155,9 @@ public class Mylinkedlist {
     	 }
     	 else {
 			 System.out.println("Element is not present");
-		 }
+	      }
  		
- 	}
+ }
 	
      public void print()
      {
