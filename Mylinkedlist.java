@@ -7,9 +7,9 @@ public class Mylinkedlist {
      Node tail;
 	
     public Mylinkedlist()
-    {
+        {
 	    this.head = null;
-		this.tail=null;
+	    this.tail=null;
 	}
 	
     public void add(Node newNode)
@@ -18,11 +18,13 @@ public class Mylinkedlist {
 			head=newNode;
 		 }
 	    
-		 if(tail==null) {
+		 if(tail==null)
+		 {
 			 tail=newNode;
-	     }
+	         }
 	    
-		 else {
+	        else
+		{
 	    	Node temp = head;
 	    	head=newNode;
 	    	head.next=temp;
@@ -33,19 +35,19 @@ public class Mylinkedlist {
      public void append(Node newNode) 
      {
     	 if(head==null && tail==null) 
-    	 {
-			   head=newNode;
-			   tail=newNode;
-			   
-		 }
+    	        {
+		     head=newNode;
+	             tail=newNode;
+	        }
 	    
-	     else {
+	     else
+	     {
 	    	
 	    	 Node temp=newNode;
 	    	 tail.next=newNode;
 	    	 tail=temp;
-	    }
-    }
+	     }
+     }
     
      public void insertBetween()
      { 
@@ -53,7 +55,8 @@ public class Mylinkedlist {
     	 System.out.println(" Enter node element after that you want to insert your new element");
     	 int key=sc.nextInt();
     	 int res= search(key);
-    	 if(res==1) {
+    	 if(res==1)
+	 {
     		 Node temp=head;
     		 Node p=temp.next;
     		 System.out.println(" Enter your element to insert");
@@ -62,7 +65,8 @@ public class Mylinkedlist {
     		 
     		 while(temp.next!=null) 
     		 {
-    			 if(temp.data==key) {
+    			 if(temp.data==key)
+			 {
     				 temp.next=node;
     				 node.next=p;
     				 break;
@@ -72,37 +76,39 @@ public class Mylinkedlist {
     			 
     		 }
     	 }
-    	 else {
+    	 else
+	 {
     		 System.out.println(" element is not present");
     	 }
-   	 }
+    }
      
      public void delete(Node first) 
      {
- 		Node temp=head;
- 		head=temp.next;
- 		
-   	 }
+ 	   Node temp=head;
+ 	   head=temp.next;
+     }
      
-     public void deleteLast() {
- 		Node temp=head;
- 		tail=temp.next;
- 		
- 		
- 	}
+     public void deleteLast()
+     {
+ 	Node temp=head;
+ 	tail=temp.next;
+     }
      
      public int search( int key) {
     	 Node temp=head;
     	 int flag=0;
     	 while(true) {
-    	 while(temp.next!=null) {
-    		 if(temp.data==key) {
+    	 while(temp.next!=null)
+	 {
+    		 if(temp.data==key)
+		 {
     			 System.out.println("value "+key+" is present");
     			 flag=1;
     		 }
     	    temp=temp.next;
          }
-    	 if(temp.data==key) {
+    	 if(temp.data==key)
+	 {
     		 System.out.println("value "+key+" is present"); 
     		 flag=1;
     	 }
