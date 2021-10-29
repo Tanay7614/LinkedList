@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 class JunitSearchTest {
 	public final Mylinkedlist list1 = new Mylinkedlist();
 	@Test
-	void test() {
+	void test()
+	{
 		
 		   Node first=new Node(30);
 		   Node second=new Node(56);
