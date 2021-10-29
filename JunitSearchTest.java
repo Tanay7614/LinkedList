@@ -17,7 +17,8 @@ class JunitSearchTest {
 		 
 		   list1.search(30);
 		 //  list1.insertBetween();
-		   list1.delete();
+		 //  list1.delete();
+		   list1.sort();
 		   list1.print();
 		  
 		   
