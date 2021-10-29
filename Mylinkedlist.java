@@ -157,7 +157,28 @@ public class Mylinkedlist {
 			 System.out.println("Element is not present");
 	      }
  		
- }
+ }     
+	public void sort() 
+       {
+    	 Node p=head;
+	 Node q=null;
+	 while(p!=null)
+	 {
+	      q=p.next;
+	      while(q!=null) 
+	      {
+	      if(p.data>q.data)
+	      {
+		  int temp=p.data;
+		  p.data=q.data;
+		  q.data =temp;
+	      }
+	        q=q.next;
+	      }
+	        p=p.next;
+	  }
+    
+        }
 	
      public void print()
      {
@@ -171,8 +192,6 @@ public class Mylinkedlist {
 			
 	 }
 
-	
-
-  }
+     }
      
 
