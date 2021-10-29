@@ -2,7 +2,8 @@ package sample2;
 
 import org.junit.jupiter.api.Test;
 
-class JunitSearchTest {
+class JunitSearchTest 
+{
 	public final Mylinkedlist list1 = new Mylinkedlist();
 	@Test
 	void test()
@@ -21,3 +22,4 @@ class JunitSearchTest {
 		   list1.sort();
 		   list1.delete();
 	}
+}
